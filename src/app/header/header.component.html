@@ -1,1 +1,29 @@
-<p>header works!</p>
+<p-menubar [model]="items">
+    <div>
+        <input type="text" pInputText placeholder="Search">
+        <p-dialog header="Login" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <div class="card">
+        <div class="p-formgroup-inline">
+            <div class="p-field">
+                <label class="p-sr-only">Username</label>
+                <input type="text" pInputText placeholder="Username"> 
+            </div>
+            <div class="p-field">
+                <label  class="p-sr-only">Password</label>
+                <input  type="password" pInputText placeholder="Password"> 
+            </div>
+        </div>
+    </div>
+    
+        <ng-template pTemplate="footer">
+            <p-button (click)="displayPosition=false" label="Sign Up" class="p-button-text"></p-button>
+            <p-button icon="pi pi-user" (click)="displayPosition=false" label="Login" class="p-button-text"></p-button>
+            
+        </ng-template>
+</p-dialog>
+        <p-button (click)="showPositionDialog('top-right')" icon="pi pi-user" label="Login" styleClass="p-button-warning"></p-button>
+
+        
+    </div>
+</p-menubar>

@@ -7,6 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatInputModule} from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ButtonModule} from 'primeng/button';
+import {MenubarModule} from 'primeng/menubar';
+import {InputTextModule} from 'primeng/inputtext';
+import {DialogModule} from 'primeng/dialog';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +24,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ButtonModule,
+    MenubarModule,
+    InputTextModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,4 +12,10 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  backToTop(){
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; //for chrome,IE, firefox
+
+  }
+
 }
